@@ -12,7 +12,7 @@
       <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
       <td (click)="onEdit(emp)">{{emp.position}}</td>
       <td (click)="onEdit(emp)">{{emp.mobile}}</td>
-      <td><a class="btn text-danger"><i class="fa fa-trash"></i></a></td>
+      <td><a class="btn text-danger" (click)="OnDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
     </tr>
   </tbody>
 </table>
