@@ -1,5 +1,6 @@
 <h1 class="display-4">EMP. Register</h1>
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
   <div class="form-group">
     <input name="fullName" #fullname="ngModel" [(ngModel)]="service.formData.fullName" class="form-control" placeholder="Full Name" required>
     <div *ngIf="fullname.invalid && fullname.touched" class="validation-error">This field is required.</div>
