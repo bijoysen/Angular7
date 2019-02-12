@@ -7,14 +7,15 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { MyPostComponent } from './my-post/my-post.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { RouteGuardGuard } from './auth/route-guard.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent },
-  {path: 'allpost', component: AllPostsComponent },
-  {path: 'following', component: FollowingComponent },
-  {path: 'favourites', component: FavouritesComponent },
-  {path: 'my-posts', component: MyPostComponent },
-  {path: 'register', component: RegisterComponent},
+  {path: 'allpost', component: AllPostsComponent, canActivate: [RouteGuardGuard] },
+  {path: 'following', component: FollowingComponent, canActivate: [RouteGuardGuard] },
+  {path: 'favourites', component: FavouritesComponent, canActivate: [RouteGuardGuard] },
+  {path: 'my-posts', component: MyPostComponent, canActivate: [RouteGuardGuard] },
+  {path: 'register', component: RegisterComponent },
   {path: 'login', component: LoginComponent }
 ];
 
