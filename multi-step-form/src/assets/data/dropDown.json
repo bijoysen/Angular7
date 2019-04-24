@@ -1,0 +1,24 @@
+{
+    "maritalStatus": [
+        {
+            "key"       : "001",
+            "value"     : "Single" 
+        },
+        {
+            "key"       : "002",
+            "value"     : "Married" 
+        },
+        {
+            "key"       : "003",
+            "value"     : "Divorced" 
+        },
+        {
+            "key"       : "004",
+            "value"     : "Widowed" 
+        },
+        {
+            "key"       : "005",
+            "value"     : "Separated" 
+        }
+    ]
+}
