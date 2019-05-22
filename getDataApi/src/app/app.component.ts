@@ -9,9 +9,10 @@ import { DataService } from './data.service';
 })
 
 export class AppComponent implements OnInit {
-  user$: User[];
-  constructor(private dataservice: DataService) {}
+  users: User[];
+  constructor(private dataService: DataService) {}
   ngOnInit() {
-    return this.dataservice.getUsers().subscribe(data => this.user$ = data);
+    return this.dataService.getUsers()
+    .subscribe(data => this.users = data);
   }
 }
