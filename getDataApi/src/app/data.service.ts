@@ -6,7 +6,7 @@ import { User } from './user.model';
   providedIn: 'root'
 })
 export class DataService {
-  apiUrl: 'https://jsonplaceholder.typicode.com/users';
+  apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private _http: HttpClient) { }
 
